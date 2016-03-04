@@ -13,7 +13,7 @@ MongoDB Monitoring Agent need `munin-node` running in the same host to collect h
 
 ## Run this container
 
-```docker run --name mongodb-mms-agent --env "MMS_API_KEY=YOUR_MMS_KEY" --privileged --net=host neowaylabs/mongodb-mms-agent```
+        docker run --name mongodb-mms-agent --env "MMS_API_KEY=YOUR_MMS_KEY" --privileged --net=host neowaylabs/mongodb-mms-agent
 
 
 > Note: You need change YOUR_MMS_KEY
