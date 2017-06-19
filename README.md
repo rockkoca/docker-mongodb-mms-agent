@@ -15,7 +15,7 @@ This Docker run both `mongodb-mms-agent` and `munin-node`.
 
 ## Run this container
 
-        docker run --name mongodb-mms-agent --env "MMS_API_KEY=YOUR_MMS_GROUP_ID" --env "MMS_API_KEY=YOUR_MMS_KEY" --privileged --net=host neowaylabs/mongodb-mms-agent
+        docker run --name mongodb-mms-agent --env "MMS_GROUP_ID=YOUR_MMS_GROUP_ID" --env "MMS_API_KEY=YOUR_MMS_KEY" --privileged --net=host neowaylabs/mongodb-mms-agent
 
 
 > Note: You need change YOUR_MMS_GROUP_ID and YOUR_MMS_KEY. see also https://docs.cloudmanager.mongodb.com/reference/automation-agent/
