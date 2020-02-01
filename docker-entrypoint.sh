@@ -27,6 +27,10 @@ set_config mmsApiKey "$MMS_API_KEY"
 set_config mmsGroupId "$MMS_GROUP_ID"
 
 cat "$config_tmp" > /etc/mongodb-mms/monitoring-agent.config
+echo "sslServerClientCertificate=/certs/mongodb.pem">> /etc/mongodb-mms/monitoring-agent.config
+echo "sslTrustedMMSServerCertificate=/certs/mongodb-cert.crt">> /etc/mongodb-mms/monitoring-agent.config
+echo "sslRequireValidMMSServerCertificates=false"  >> /etc/mongodb-mms/monitoring-agent.config
+echo "sslRequireValidServerCertificates=false"  >> /etc/mongodb-mms/monitoring-agent.config
 rm "$config_tmp"
 
 # Setup munin-node
